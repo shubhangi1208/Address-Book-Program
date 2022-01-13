@@ -48,6 +48,35 @@ public class AddressBook1 {
         }
 
     }
+    public void editContact(){
+        //getting first name from user to find that contact which you wat to edit
+        System.out.println("Enter the first name");
+        String firstName= sc.next();
 
+        boolean isAvailable= false;
+        for(Contacts1 contacts : list){
+            if(firstName.equalsIgnoreCase(contacts.getFirstname())){
+                isAvailable=true;
+                System.out.println("Enter the Last Name :");
+                contacts.setLastname(sc.next());
+                System.out.println("Enter the Address :");
+                contacts.setAddress(sc.next());
+                System.out.println("Enter the City :");
+                contacts.setCity(sc.next());
+                System.out.println("Enter the State :");
+                contacts.setState(sc.next());
+                System.out.println("Enter the Zip Code :");
+                contacts.setZip(sc.next());
+                System.out.println("Enter the Phone Number :");
+                contacts.setPhone_number(sc.next());
+                System.out.println("Enter the EMail ID :");
+                contacts.setEmail(sc.next());
+                break;
+            }
+        }
+        if(!isAvailable){
+            System.out.println("Contact Number Not found ");
+        }
+    }
 
 }

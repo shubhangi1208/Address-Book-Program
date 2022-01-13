@@ -17,6 +17,7 @@ public class AddressBookMain1 {
                     Ab.addContacts();
                     break;
                 case 2:
+                    Ab.editContact();
                     break;
                 case 3:
                     Ab.showContacts();
@@ -24,6 +25,7 @@ public class AddressBookMain1 {
                 case 4:
                     break;
                 case 5:
+                    System.out.println("Thank you.");
                     break;
             }
         }while (choice != 5);
