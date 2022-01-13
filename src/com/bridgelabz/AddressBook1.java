@@ -48,15 +48,16 @@ public class AddressBook1 {
         }
 
     }
-    public void editContact(){
+
+    public void editContact() {
         //getting first name from user to find that contact which you wat to edit
         System.out.println("Enter the first name");
-        String firstName= sc.next();
+        String firstName = sc.next();
 
-        boolean isAvailable= false;
-        for(Contacts1 contacts : list){
-            if(firstName.equalsIgnoreCase(contacts.getFirstname())){
-                isAvailable=true;
+        boolean isAvailable = false;
+        for (Contacts1 contacts : list) {
+            if (firstName.equalsIgnoreCase(contacts.getFirstname())) {
+                isAvailable = true;
                 System.out.println("Enter the Last Name :");
                 contacts.setLastname(sc.next());
                 System.out.println("Enter the Address :");
@@ -74,9 +75,30 @@ public class AddressBook1 {
                 break;
             }
         }
-        if(!isAvailable){
+        if (!isAvailable) {
             System.out.println("Contact Number Not found ");
         }
     }
 
+    public void deleteContact() {
+
+
+        System.out.println("Enter the first name");
+        String firstName = sc.next();
+
+        boolean isAvailable = false;
+        for (Contacts1 contacts : list) {
+            if (firstName.equalsIgnoreCase(contacts.getFirstname())) {
+                isAvailable = true;
+                list.remove(contacts);
+                System.out.println("Contact Deleted ");
+                break;
+            }
+            if (!isAvailable) {
+                System.out.println("Contact Number Not found ");
+            }
+
+        }
+
+    }
 }

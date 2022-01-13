@@ -23,6 +23,7 @@ public class AddressBookMain1 {
                     Ab.showContacts();
                     break;
                 case 4:
+                    Ab.deleteContact();
                     break;
                 case 5:
                     System.out.println("Thank you.");
