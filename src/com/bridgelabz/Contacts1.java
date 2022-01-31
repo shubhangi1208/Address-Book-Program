@@ -1,5 +1,7 @@
 package com.bridgelabz;
 
+import java.util.Objects;
+
 public class Contacts1 {
     String firstname;;
     String lastname;
@@ -72,5 +74,32 @@ public class Contacts1 {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Contacts1 contacts1 = (Contacts1) o;
+        return firstname.equals(contacts1.firstname);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstname);
+    }
+
+    @Override
+    public String toString() {
+        return "Contacts1{" +
+                "firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", zip='" + zip + '\'' +
+                ", state='" + state + '\'' +
+                ", phone_number='" + phone_number + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }
