@@ -40,7 +40,7 @@ public class AddressBook1 {
             System.out.println("Enter the EMail ID :");
             contacts.setEmail(sc.next());
             list.add(contacts);
-            System.out.println("Contact added Sucessfully");
+            System.out.println("Contact added Successfully");
         }else{
             System.out.println("Contact already Exists");
         }
@@ -69,8 +69,8 @@ public class AddressBook1 {
         //getting first name from user to find that contact which you wat to edit
         System.out.println("Enter the first name");
         String firstName = sc.next();
-
         boolean isAvailable = false;
+
         for (Contacts1 contacts : list) {
             if (firstName.equalsIgnoreCase(contacts.getFirstname())) {
                 isAvailable = true;
@@ -129,7 +129,6 @@ public class AddressBook1 {
     int choice;
         do {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Welcome to Address Book Program");
         System.out.println("Kindly Enter choice \n 1. Add new Contact \n 2. Edit Contact details \n 3. Display details  \n 4 Delete Contact \n 5. Quit");
         choice = scan.nextInt();
         switch (choice) {
