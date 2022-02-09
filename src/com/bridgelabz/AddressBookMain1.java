@@ -47,7 +47,7 @@ public class AddressBookMain1 {
                     .collect(Collectors.toList()).forEach(contacts1 -> searchcontactlist.add(contacts1));
         }
         System.out.println("Result is " + searchcontactlist);
-        long total = searchcontactlist.stream().count();
+        long total = searchcontactlist.stream().count();  //count by City or State
         System.out.println("Number of city or state is " + total);
     }
 
