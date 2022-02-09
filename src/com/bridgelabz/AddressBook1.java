@@ -10,9 +10,9 @@ public class AddressBook1 {
     //ArrayList created for storing contacts
     ArrayList<Contacts1> list = new ArrayList<Contacts1>();
 
-    public boolean equalsFirstName(Contacts1 contacts1) {
+    public boolean equalsFirstName(Contacts1 compareContatct) {
         for (Contacts1 contacts :list){
-            if (contacts.equals(contacts)){
+            if (compareContatct.equals(contacts)){
                 return true;
             }
         }
